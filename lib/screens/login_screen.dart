@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoppie/clippaths/lower_clippath.dart';
 import 'package:shoppie/clippaths/upper_clippath.dart';
-import 'package:shoppie/screens/home_screen.dart';
+import 'package:shoppie/screens/home/home_screen.dart';
 import 'package:shoppie/screens/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
