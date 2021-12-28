@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:shoppie/clippaths/lower_clippath.dart';
 import 'package:shoppie/clippaths/upper_clippath.dart';
-import 'package:shoppie/screens/home/home_screen.dart';
-import 'package:shoppie/screens/signup_screen.dart';
+import 'package:shoppie/screens/Auth/login_screen.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class SignUp extends StatefulWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _SignUpState createState() => _SignUpState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpState extends State<SignUp> {
   bool isObsecure = true;
   @override
   Widget build(BuildContext context) {
@@ -40,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: const [
                         Spacer(),
                         Text(
-                          "Login",
+                          "Create Account",
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             color: Colors.white,
@@ -60,8 +59,24 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(
-                      height: 20,
+                    const Text(
+                      "Name",
+                      textAlign: TextAlign.left,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8.0),
+                      child: TextField(
+                        cursorColor: Color.fromRGBO(255, 121, 63, 1),
+                        decoration: InputDecoration(
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.orange),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.orange),
+                            ),
+                            hintText: "Enter your name",
+                            labelStyle: TextStyle(color: Color(0xFF424242))),
+                      ),
                     ),
                     const Text(
                       "Email Address",
@@ -129,33 +144,17 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                       ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
-                          ),
-                        );
-                      },
+                      onPressed: null,
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width,
                         child: const Center(
                           child: Text(
-                            "Login",
+                            "Create Account",
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    const Center(
-                      child: Text(
-                        "Forgot Password?",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    )
                   ],
                 ),
               ),
@@ -182,11 +181,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const SignUp(),
+                                builder: (context) => const LoginScreen(),
                               ));
                         },
                         child: const Text(
-                          "Create Account",
+                          "Login",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Color.fromRGBO(255, 121, 63, 1),

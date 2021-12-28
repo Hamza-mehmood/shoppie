@@ -53,7 +53,7 @@ class ProductDetails extends StatelessWidget {
                             height: 25,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5),
-                              color: Color.fromRGBO(255, 121, 63, 1),
+                              color: const Color.fromRGBO(255, 121, 63, 1),
                             ),
                             child: const Center(
                               child: Text(
@@ -176,7 +176,7 @@ class ProductDetails extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
                       Row(
@@ -188,7 +188,7 @@ class ProductDetails extends StatelessWidget {
                           )
                         ],
                       ),
-                      Container(
+                      SizedBox(
                         height: 10,
                         width: 50,
                         child: ListView(

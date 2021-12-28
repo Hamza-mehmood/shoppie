@@ -12,7 +12,7 @@ class GridContainer extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => ProductDetails()));
+              MaterialPageRoute(builder: (context) => const ProductDetails()));
         },
         child: Container(
           decoration: BoxDecoration(
